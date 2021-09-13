@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FlowControl</title>
+</head>
+
+<body>
+    <h2>JS FLow Control</h2>
+    <p id="root"></p>
+    <button onclick="displayArray()">Display Array</button>
+    <button onclick="findLength()">Find Length</button>
+    <button onclick="addValue()">Add Skills </button>
+    <button onclick="popValue()">Delete Last value </button>
+    <button onclick="changeValue()">Change Value </button>
+    <button onclick="showDoWhileLoop()">DO WHILE LOOP </button>
+    <script>
+        /*Array is use to store data in the form of list with serial indexing
+        and array fucntion is used to perform action on array*/
+        let mySkills = ['python', 'html', 'css', 'javascript', 'c++', 'react', 'django']
+
+        function displayArray() {  //Example of If else 
+            return document.getElementById("root").innerHTML = "My Skills are " + mySkills;
+        }
+        function findLength() {  //Example of If else 
+            return document.getElementById("root").innerHTML = "Number of Skills I have  " + mySkills.length;
+        }
+        function pushValue() {  //Example of If else 
+            let skill = prompt("Enter Your New Skill")
+            mySkills.push(skill);
+            return document.getElementById("root").innerHTML = "My updated skills are<br> " + mySkills;
+        }
+        function popValue() {  //Example of If else 
+            mySkills.pop();
+            return document.getElementById("root").innerHTML = "My updated skills are<br> " + mySkills;
+        }
+        function changeValue() {  //Example of If else 
+            let index = Number(prompt("Enter Index Number"));
+            let skill = prompt("Enter Your New Skill");
+            mySkills[index]=skill;
+            return document.getElementById("root").innerHTML = "My updated skills are<br> " + mySkills;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
