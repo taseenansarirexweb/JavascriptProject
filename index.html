@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Variable</title>
+</head>
+
+<body>
+    <h2>JS Varibale</h2>
+    <p id="root"></p>
+    <button onclick="showStrings()">Show Srings</button>
+    <button onclick="showNumber()">Show Number (without Decemal)</button>
+    <button onclick="showNumberDec()">Show Number(with Decimal) </button>
+    <button onclick="showBool()">Show Boolians</button>
+    <script>
+        /* There are 3 ways to declare a JavaScript variable:
+
+                    Using var
+                    Using let
+                    Using const*/
+        //examples       
+        var name = "Joe";  //var is decleared once and its changeable(we can change the value)
+        let num = 14;     //It is same as var but we can cannot access outside the block
+        const PI = 3.14;  //In const after assigning value we cannot change the value
+        
+        /*There are three data types:
+            1.Number
+                a.number without decimals
+                b.Number with decimals
+            2.String
+            3.boolian */
+        //examples
+        function showStrings(){
+            return document.getElementById("root").innerHTML= name;
+        }
+        function showNumber(){
+            return document.getElementById("root").innerHTML= num;
+        }
+        function showNumberDec(){
+            return document.getElementById("root").innerHTML= PI;
+        }
+        function showBool(){
+            let value = true;
+            return document.getElementById("root").innerHTML= value ;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
