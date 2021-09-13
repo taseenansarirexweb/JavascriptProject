@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FlowControl</title>
+</head>
+
+<body>
+    <h2>JS FLow Control</h2>
+    <p id="root"></p>
+    <button onclick="showIfElse()">IF ELSE</button>
+    <button onclick="showElseIF()">ELSE IF</button>
+    <button onclick="showSwitch()">SWITCH </button>
+    <button onclick="showForLoop()">FOR LOOP </button>
+    <button onclick="showWhileLoop()">WHILE LOOP </button>
+    <button onclick="showDoWhileLoop()">DO WHILE LOOP </button>
+    <script>
+        /* There are loops and conditional and switch in flowcontrol
+        1.Condition
+            a.if statement
+            b.if else statement
+            c.else if statement
+        2.Switch
+        3.Loops
+            a.for loop
+            b.while loop
+            c.do while*/
+
+        function showIfElse() {  //Example of If else 
+            let num = prompt("Check Number is Positive/Negaticve")
+            if (num > 0) {
+                return document.getElementById("root").innerHTML = num + " is positive";
+
+            }
+            else {
+                return document.getElementById("root").innerHTML = num + " is negative";
+            }
+        }
+        function showElseIF() { //example of else if
+            let num = prompt("Enter Your age");
+            if (num < 18) {
+                return document.getElementById("root").innerHTML = "you are minner";
+
+            }
+            else if (num > 45) {
+                return document.getElementById("root").innerHTML = "You are too older";
+            }
+            else {
+                return document.getElementById("root").innerHTML = "You are eligible";
+            }
+        }
+        function showSwitch() { //example of switch statement
+            let num = prompt("Enter Day eg.1,2,3");
+            switch (Number(num)) {
+                case 1:
+                    day = "Sunday";
+                    break;
+                case 2:
+                    day = "Monday";
+                    break;
+                case 3:
+                    day = "Tuesday";
+                    break;
+                case 4:
+                    day = "Wednesday";
+                    break;
+                case 5:
+                    day = "Thursday";
+                    break;
+                case 6:
+                    day = "Friday";
+                    break;
+                case 7:
+                    day = "Saturday";
+            }
+            return document.getElementById("root").innerHTML = "Today is "+day;
+        }
+        function showForLoop() { //example of for loop
+            let value ='';
+            let num = prompt("Enter any number?");
+            for(let i = 0; i<=Number(num);i++){
+                value+=String(i)+',';
+            }
+            return document.getElementById("root").innerHTML = "The Series of Number is <br>"+value;
+        }
+        function showWhileLoop() { //example of while loop
+            let value = 0;
+            let i = 0;
+            let num = prompt("Find Square addition of number?");
+            while(i<=Number(num)){
+                value+=i*i;
+                i++;
+            }
+            return document.getElementById("root").innerHTML = "The addition of square  <br>"+value;
+        }
+        function showDoWhileLoop() { //example of do while loop
+            let value = 0;
+            let i = 0;
+            let num = prompt("Find addition of number?");
+            do{
+                value+=i;
+                i++;
+            }
+            while(i<=num);
+            return document.getElementById("root").innerHTML = "The addition of square  <br>"+value;
+        }
+
+
+    </script>
+</body>
+
+</html>
