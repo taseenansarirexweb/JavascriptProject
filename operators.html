@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Operators</title>
+</head>
+
+<body>
+    <h2>JS Expression/Operators</h2>
+    <p id="root"></p>
+    <button onclick="showArithmetic()">Show Aritmetic op</button>
+    <button onclick="showCondition()">Show Conditon op</button>
+    <button onclick="showLogical()">Show Logical op </button>
+    <script>
+        /* There are 7 operator in javascript:
+
+                    assignement operator
+                    arithmetic Operator
+                    Comparision Operator 
+                    String Operator 
+                    Type Operator
+                    Logical Operator
+                    Bitwise Operator     */
+        //examples       
+        //"=" is an example of assignment operator.
+        //'+', '-' , '*','/' , '**', '%' , '++','--' are the example of arithmetic operator
+        //'+' operator is in string to concatinate two string
+        //'==','===','!=','!===','<=','>=','<','>','?'
+        //'&&', '||','!' are logical operator
+        //'typeof' Returns the type of a variable and 'instanceof' Returns true if an object is an instance of an object type
+
+        let num1 = 10;
+        let num2 = 4;
+
+
+        function showArithmetic() {
+            let sum = num1 + num2;
+            let sub = num1 - num2;
+            let mul = num1 * num2;
+            let dev = num2 / num2;
+            let exp = num1 ** num2;
+            let mod = num1 % num2;
+            return document.getElementById("root").innerHTML = "Num1 = " + num1 + " and Num2 = " + num2 + " <br>sum = " + sum + "<br>sub = " + sub
+                + "<br>mul = " + mul + "<br>Devide = " + dev + "<br>exponential = " + exp + "<br>Mod = " + mod;
+        }
+        function showCondition() {
+            if (num1 > num2) {
+                return document.getElementById("root").innerHTML = "Num1 = " + num1 + " and Num2 = " + num2 + " <br>" + num1 + " is Greater";
+            }
+            else {
+                return document.getElementById("root").innerHTML = "Num1 = " + num1 + " and Num2 = " + num2 + " <br>" + num2 + " is Greater";
+            }
+
+        }
+        function showLogical() {
+            if (num2 > 0 && num2 < num1) {
+                return document.getElementById("root").innerHTML = "Num2 is positive and smaller than Num1";
+
+            }
+            else {
+                return document.getElementById("root").innerHTML = "Num2 is negative";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
