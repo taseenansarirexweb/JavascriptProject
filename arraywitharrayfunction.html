@@ -13,33 +13,47 @@
     <button onclick="addValue()">Add Skills </button>
     <button onclick="popValue()">Delete Last value </button>
     <button onclick="changeValue()">Change Value </button>
-    <button onclick="showDoWhileLoop()">DO WHILE LOOP </button>
+    <button onclick="sortValue()">Sort Elements </button>
+    <button onclick="displayList()">List</button>
     <script>
         /*Array is use to store data in the form of list with serial indexing
-        and array fucntion is used to perform action on array*/
+        and array fucntion is used to perform actions on array*/
         let mySkills = ['python', 'html', 'css', 'javascript', 'c++', 'react', 'django']
 
-        function displayArray() {  //Example of If else 
+        function displayArray() {  //display array 
             return document.getElementById("root").innerHTML = "My Skills are " + mySkills;
         }
-        function findLength() {  //Example of If else 
+        function findLength() {  //Find Length    
             return document.getElementById("root").innerHTML = "Number of Skills I have  " + mySkills.length;
         }
-        function pushValue() {  //Example of If else 
+        function pushValue() {  //Push Value 
             let skill = prompt("Enter Your New Skill")
             mySkills.push(skill);
             return document.getElementById("root").innerHTML = "My updated skills are<br> " + mySkills;
         }
-        function popValue() {  //Example of If else 
+        function popValue() {  //Pop value 
             mySkills.pop();
             return document.getElementById("root").innerHTML = "My updated skills are<br> " + mySkills;
         }
-        function changeValue() {  //Example of If else 
+        function changeValue() {  //Change Value by index 
             let index = Number(prompt("Enter Index Number"));
             let skill = prompt("Enter Your New Skill");
             mySkills[index]=skill;
             return document.getElementById("root").innerHTML = "My updated skills are<br> " + mySkills;
         }
+        function sortValue() {  //sort value 
+            return document.getElementById("root").innerHTML = "My sorted skills are<br> " + mySkills.sort();
+        }
+        function displayList() {  //Display List 
+            let list = "<ul>";
+            for(let items in mySkills){
+                list+="<li>"+mySkills[items]+"</li>";
+            }
+            list+="</ul>" 
+            return document.getElementById("root").innerHTML = "My List of Skills are<br> " + list;
+        }
+        
+        
 
 
 
